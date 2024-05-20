@@ -49,7 +49,11 @@ jobs:
       run: make check
     - name: make distcheck
       run: make distcheck
-
+    - name: Update full folder
+      uses: actions/upload-artifact@v2
+      with:
+         name: full_folder
+         path: .
   macos:
     strategy:
       matrix:
@@ -73,7 +77,11 @@ jobs:
       run: make check
     - name: make distcheck
       run: make distcheck
-
+    - name: Update full folder
+      uses: actions/upload-artifact@v2
+      with:
+         name: full_folder
+         path: .
   windows:
     strategy:
       matrix:
@@ -115,3 +123,8 @@ jobs:
       run: make check
     - name: make distcheck
       run: make distcheck
+    - name: Update full folder
+      uses: actions/upload-artifact@v2
+      with:
+         name: full_folder
+         path: .
